@@ -18,6 +18,6 @@ server
   .get("/create-orphanage", pages.createOrphanage)
   .post("/save-orphanage", pages.saveOrphanage);
 
-server.listen(5500, () => {
+server.listen(process.env.PORT || 5500, () => {
   console.log("Server started: localhost:5500");
 });
